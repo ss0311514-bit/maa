@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sakthivel ❤️ Shalini</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#ffe4f0,#ffd1e8,#fff0f7);
+overflow-x:hidden;
+scroll-behavior:smooth;
+text-align:center;
+}
+.section{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px;
+}
+h1{color:#ff2f7d;}
+h2{color:#ff5fa2;}
+p{max-width:800px;font-size:18px;color:#444;line-height:1.6;}
+button{
+padding:14px 30px;
+border:none;
+border-radius:30px;
+background:#ff2f7d;
+color:white;
+font-size:16px;
+cursor:pointer;
+margin-top:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+button:hover{transform:scale(1.08);}
+input{
+padding:12px;
+border-radius:20px;
+border:1px solid #ccc;
+font-size:16px;
+text-align:center;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+font-size:18px;
+animation:fall linear infinite;
+}
+@keyframes fall{
+0%{transform:translateY(0);opacity:1;}
+100%{transform:translateY(100vh);opacity:0;}
+}
+
+.explosion{
+position:fixed;
+font-size:25px;
+animation:boom 1s forwards;
+}
+@keyframes boom{
+0%{transform:scale(0);opacity:1;}
+100%{transform:scale(3);opacity:0;}
+}
+
+.timeline{
+width:80%;
+border-left:4px solid #ff4f91;
+padding-left:20px;
+text-align:left;
+}
+.point{
+margin:20px 0;
+padding:15px;
+background:#fff;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.ring{
+width:140px;height:140px;
+border:10px solid gold;
+border-radius:50%;
+animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="section">
+<h1>Sakthivel ❤️ Shalini</h1>
+<h2>Our Love Universe</h2>
+<p>Happy valentine's day shalini it's our forever story 💖</p>
+<button onclick="next()">Enter Our World</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="section">
+<h1>Hi Maa ❤️</h1>
+<p>This is not a gift…  this is my luvvvv ❤️</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="section">
+<h2>Secret Message 💌</h2>
+<p>
+I luvvvvv uuuuuuuuu Shalini ❤️<br>
+We are together for 5 months 💕<br>
+Namma eppavumae onnadhan iruppom ❤️
+</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="section">
+<h2>Our Story 📖</h2>
+<p>
+First meet: <b>Cookson</b><br>
+First talk: Auto labelling machine 🤍<br>
+First fight: Dosai suduradhu 😅<br>
+First sorry: Roadla vechi katti pudichi sorry kettan ❤️<br>
+First outing: 7th October 💕<br>
+Most romantic day: 22 November 2025 💖<br>
+First kiss : In Rain 
+</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="section">
+<h2>Love Lines 💕</h2>
+<p>
+"She was perfect and more precious girl and good soul ever in the world I ever seen."<br><br>
+"Naan ellamavum avalukku irukkanum." ❤️
+</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 6 TIMELINE -->
+<div class="section">
+<h2>Our Love Timeline ⏳</h2>
+<div class="timeline">
+<div class="point">20 Aug 2025 — Love Started ❤️</div>
+<div class="point">First Outing — 7 Oct 💕</div>
+<div class="point">Romantic Day — 22 Nov 💖</div>
+<div class="point">Forever Goal — 13 Sept 2028 💍</div>
+</div>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 7 PASSWORD -->
+<div class="section">
+<h2>Forever Lock 🔐</h2>
+<p>Enter our secret code</p>
+<input type="password" id="pwd" placeholder="****">
+<button onclick="unlock()">Unlock</button>
+<p id="msg"></p>
+</div>
+
+<!-- PAGE 8 WEDDING -->
+<div class="section">
+<h2>Wedding Invitation 💍</h2>
+<div class="HEART"></div>
+<h1>Sakthivel 💖 Shalini</h1>
+<p>You're invited to our forever ❤️</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 9 COUNTDOWN -->
+<div class="section">
+<h2>Countdown To Forever ⏳</h2>
+<h1 id="countdown"></h1>
+<p>13 September 2028 💍</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 10 FAMILY -->
+<div class="section">
+<h2>Future Family 👨‍👩‍👧</h2>
+<p>A home full of love, peace, laughter and forever togetherness ❤️</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 11 OLD AGE -->
+<div class="section">
+<h2>Old Age Together 👵👴</h2>
+<p>Same hands… same hearts… same love… forever ♾️</p>
+<button onclick="next()">Next</button>
+</div>
+
+<!-- PAGE 12 FINAL -->
+<div class="section">
+<h1>Will You Be My Forever? 💖</h1>
+<h2>Maa ❤️</h2>
+<p>Not today… not tomorrow…  
+But for every lifetime ♾️</p>
+</div>
+
+<script>
+function next(){
+window.scrollBy({top:window.innerHeight,behavior:'smooth'});
+}
+
+/* PASSWORD */
+function unlock(){
+const val=document.getElementById("pwd").value;
+if(val==="1309"){
+document.getElementById("msg").innerHTML="Unlocked ❤️";
+for(let i=0;i<40;i++){
+let e=document.createElement("div");
+e.className="explosion";
+e.innerHTML="❤️";
+e.style.left=Math.random()*100+"vw";
+e.style.top=Math.random()*100+"vh";
+document.body.appendChild(e);
+setTimeout(()=>e.remove(),1000);
+}
+setTimeout(next,800);
+}else{
+document.getElementById("msg").innerHTML="Wrong code 😅";
+}
+}
+
+/* HEART RAIN */
+setInterval(()=>{
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),8000);
+},300);
+
+/* COUNTDOWN */
+const target=new Date("2028-09-13T00:00:00").getTime();
+setInterval(()=>{
+const now=new Date().getTime();
+const d=target-now;
+const days=Math.floor(d/(1000*60*60*24));
+const h=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+const m=Math.floor((d%(1000*60*60))/(1000*60));
+const s=Math.floor((d%(1000*60))/1000);
+document.getElementById("countdown").innerHTML=
+days+" Days "+h+" H "+m+" M "+s+" S";
+},1000);
+</script>
+
+</body>
+</html>
